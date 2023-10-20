@@ -1,3 +1,5 @@
-# react-guild
-Used to track and manage my source code while learning reactjs
-src: Dư Thanh Được
+# React Guild
+
+This repository is used to track and manage my source code while learning React.js.
+
+Author: Dư Thanh Được
