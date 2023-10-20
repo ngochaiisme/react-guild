@@ -14,3 +14,24 @@ const element2 = (
         Google
     </a>
 )
+
+const element3 = <h3 />
+
+const elemtent4 = <img src="" />
+
+const element5 = <input />
+
+const comment = `<script>console.log("send token")</script>`
+
+const element6 = <h1 className="greeting">Hello guy</h1>
+
+//babel bien dich element 6 thanh
+const element7 = React.createElement('h1', { className: 'greeting' }, 'Hello guy')
+
+const element8 = {
+    type: 'h1',
+    props: {
+        className: 'greeting',
+        children: 'Hello,world!',
+    },
+}
