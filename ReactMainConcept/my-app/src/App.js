@@ -7,9 +7,9 @@ import LoginControl from './LoginControl'
 function App() {
     return (
         <div className="App">
-            <DemoLifeCycle />
+            {/* <DemoLifeCycle /> */}
             {/* <Clock /> */}
-            {/* <LoginControl /> */}
+            <LoginControl />
         </div>
     )
 }
