@@ -6,6 +6,7 @@ import LoginControl from './LoginControl'
 import ProductList from './ProductList/ProductList'
 import BasicControlledComponent from './Xử lý Form/ControlledComponent'
 import ControlledExample from './Xử lý Form/ControlledComponent'
+import BasicUncontrolInput, { FileInput } from './Xử lý Form/UnControlledComponent'
 import HandleMultipleInput from './Xử lý Form/Xử lý nhiều input'
 
 function App() {
@@ -16,7 +17,9 @@ function App() {
             {/* <LoginControl /> */}
             {/* <ProductList /> */}
             {/* <BasicControlledComponent /> */}
-            <HandleMultipleInput />
+            {/* <HandleMultipleInput /> */}
+            {/* <BasicUncontrolInput /> */}
+            <FileInput />
         </div>
     )
 }

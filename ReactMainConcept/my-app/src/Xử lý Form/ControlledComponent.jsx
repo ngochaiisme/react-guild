@@ -10,6 +10,7 @@ export default class BasicControlledComponent extends React.Component {
     }
 
     handleChange = (event) => {
+        console.log(event.target.value)
         this.setState({ value: event.target.value })
     }
     handleSubmit = (event) => {
