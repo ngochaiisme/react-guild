@@ -2,6 +2,7 @@ import './App.css'
 import Calculator from './Caculator/Caculator'
 
 import Clock from './Clock'
+import Composition from './Composition & Inheritance/Composition'
 import Inheritance from './Composition & Inheritance/Inheritance'
 import DemoLifeCycle from './DemoLifeCycleComponent'
 import LoginControl from './LoginControl'
@@ -23,7 +24,8 @@ function App() {
             {/* <BasicUncontrolInput /> */}
             {/* <FileInput /> */}
             {/* <Calculator /> */}
-            <Inheritance />
+            {/* <Inheritance /> */}
+            <Composition />
         </div>
     )
 }
