@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 export default function UserFuntionalComponent() {
     const [age, setAge] = useState(21)
     const [address, setAddress] = useState({
@@ -16,6 +16,29 @@ export default function UserFuntionalComponent() {
             city: 'qn',
         }))
     }
+
+    useEffect(() => {
+        console.log('useEffect with array [] = didmount')
+
+        return () => {
+            console.log('return from [] = will unmount everything')
+        }
+    }, [])
+    useEffect(() => {
+        console.log('useEffect with no dependencies = didupdate')
+    })
+
+    useEffect(() => {
+        console.log('useEffect with array [] = age')
+    }, [age])
+
+    useEffect(() => {
+        console.log('useEffect with array [] = age')
+        return () => {
+            console.log('return = will unmount Age')
+        }
+    }, [age])
+
     return (
         <div className="flex flex-col items-center justify-start">
             <div className="text-center">
