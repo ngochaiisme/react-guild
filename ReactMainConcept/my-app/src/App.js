@@ -6,6 +6,7 @@ import Composition from './Composition & Inheritance/Composition'
 import Inheritance from './Composition & Inheritance/Inheritance'
 import DemoLifeCycle from './DemoLifeCycleComponent'
 import LoginControl from './LoginControl'
+import FilterableProductTable from './Mockup/FilterableProductTable'
 import ProductList from './ProductList/ProductList'
 import BasicControlledComponent from './Xử lý Form/ControlledComponent'
 import ControlledExample from './Xử lý Form/ControlledComponent'
@@ -25,7 +26,8 @@ function App() {
             {/* <FileInput /> */}
             {/* <Calculator /> */}
             {/* <Inheritance /> */}
-            <Composition />
+            {/* <Composition /> */}
+            <FilterableProductTable />
         </div>
     )
 }
