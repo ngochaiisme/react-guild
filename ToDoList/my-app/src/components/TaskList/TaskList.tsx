@@ -2,7 +2,7 @@ import { TaskListProps } from '../../@types/tasklist.type'
 import styles from './taskList.module.scss'
 
 export default function TaskList(props: TaskListProps) {
-  const { doneTaskList, todos, handleDoneTodo } = props
+  const { doneTaskList, todos, handleDoneTodo, startEditTodo } = props
 
   const handleOnChange = (id: string) => (e: React.ChangeEvent<HTMLInputElement>) => {
     handleDoneTodo(id, e.target.checked)
@@ -19,7 +19,9 @@ export default function TaskList(props: TaskListProps) {
       />
       <span className={`${styles.taskName} ${item.done ? styles.taskNameDone : ''}`}>{item.name}</span>
       <div className={styles.taskActions}>
-        <button className={styles.taskBtn}>🖋️</button>
+        <button className={styles.taskBtn} onClick={() => startEditTodo(item.id)}>
+          🖋️
+        </button>
         <button className={styles.taskBtn}>🗑️</button>
       </div>
     </div>
