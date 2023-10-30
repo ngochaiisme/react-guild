@@ -54,14 +54,40 @@ export default function TodoList() {
     })
     setCurrentTodo(null)
   }
+  const deleteTodo = (id: string) => {
+    if (currentTodo) {
+      setCurrentTodo(null)
+    }
+    setTodos((prev) => {
+      // return prev.filter((item) => item.id !== id)
+      const index = prev.findIndex((item) => item.id === id)
+      if (index > -1) {
+        const result = [...prev]
+        result.splice(index, 1)
+        return result
+      }
+      return prev
+    })
+  }
 
   return (
     <div className={styles.todoList}>
       <div className={styles.todoListContainer}>
         <TaskInput addTodo={addTodo} currentTodo={currentTodo} editTodo={editTodo} finishEditTodo={finishEditTodo} />
 
-        <TaskList todos={notDoneList} handleDoneTodo={handleDoneTodo} startEditTodo={startEditTodo} />
-        <TaskList doneTaskList todos={doneList} handleDoneTodo={handleDoneTodo} startEditTodo={startEditTodo} />
+        <TaskList
+          todos={notDoneList}
+          handleDoneTodo={handleDoneTodo}
+          startEditTodo={startEditTodo}
+          deleteTodo={deleteTodo}
+        />
+        <TaskList
+          doneTaskList
+          todos={doneList}
+          handleDoneTodo={handleDoneTodo}
+          startEditTodo={startEditTodo}
+          deleteTodo={deleteTodo}
+        />
       </div>
     </div>
   )

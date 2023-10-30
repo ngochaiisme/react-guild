@@ -15,9 +15,17 @@ export default function TaskInput(props: TaskInputProps) {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     if (currentTodo) {
+      if (currentTodo.name === '') {
+        alert('Task name must not be empty')
+        return
+      }
       finishEditTodo()
       if (name) setName('')
     } else {
+      if (name === '') {
+        alert('Task name must not be empty')
+        return
+      }
       addTodo(name)
       setName('')
     }

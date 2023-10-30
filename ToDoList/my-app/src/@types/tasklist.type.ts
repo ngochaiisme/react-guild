@@ -5,4 +5,5 @@ export interface TaskListProps {
   todos: Todo[]
   handleDoneTodo: (id: string, done: boolean) => void
   startEditTodo: (id: string) => void
+  deleteTodo: (id: string) => void
 }
